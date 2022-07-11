@@ -2440,7 +2440,7 @@ video {
   height: auto;
   min-height: 10px;
   max-height: 90vh;
-  overflow: auto;
+  overflow: none;
   color: white;
   font-size: 15px;
   letter-spacing: 0.5px;
