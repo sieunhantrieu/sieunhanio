@@ -10,7 +10,7 @@ $(function() {
 	$(".testCreateW").click(function() {
 		createWindow(
 			"testImage",
-			"Hi this is a test (also in dev, sorry ðŸ˜”)",
+			"Hi this is a test (also in dev, sorry all˜”)",
 			200,
 			80,
 			true,
@@ -294,7 +294,7 @@ $(function() {
 		let password = $(".systemLockInput").val();
 		$(".lockScreenLogIn").addClass("wait");
 		$(".systemLockInput").blur();
-		if (password === "123") {
+		if (password === "654321") {
 			setTimeout(function() {
 				$(".lockScreen").removeClass("locked");
 				$(".lockScreenLogIn").removeClass("wait");

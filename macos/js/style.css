@@ -2219,7 +2219,7 @@ video {
   position: absolute;
   left: 50%;
   bottom: -1px;
-  height: 46px;
+  height: 77px;
   width: auto;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -2242,9 +2242,15 @@ video {
 .taskbar .taskbarApp {
   position: relative;
   display: inline-flex;
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   margin: 0;
+}
+.taskbar .taskbarApp:hover {
+	transition: all ease-in-out 0.2s;
+	margin-top: -8px;
+	width: 70px;
+  height: 70px;
 }
 .taskbar .taskbarApp:active i {
   filter: brightness(0.65);
