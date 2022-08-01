@@ -14,23 +14,24 @@
 <link rel="stylesheet" type="text/css" href="css/effect2.css" />
 <script src="js/modernizr.custom.js"></script>
 </head>
+
 <style>
 .tuyensinh {
-	counter-reset: dem-tuyensinh;
+    counter-reset: dem-tuyensinh;
 }
 #truonghoc {
-	counter-reset: dem-daihoc;
+    counter-reset: dem-daihoc;
 }
 .giaodientuyensinh h3::after {
-	color: orangered;
-	counter-increment: dem-tuyensinh;
-	content: 'Giao diện mẫu Tuyển sinh ' counter(dem-tuyensinh);
+    color: orangered;
+    counter-increment: dem-tuyensinh;
+    content: 'Giao diện mẫu Tuyển sinh ' counter(dem-tuyensinh);
 }
 .giaodiendaihoc h3::after {
-	/* Increment "dem-daihoc" by 1 */
-	color: orangered;
-	counter-increment: dem-daihoc;
-	content: 'Giao diện mẫu Đại học ' counter(dem-daihoc);
+    /* Increment "dem-daihoc" by 1 */
+    color: orangered;
+    counter-increment: dem-daihoc;
+    content: 'Giao diện mẫu Đại học ' counter(dem-daihoc);
 }
 </style>
 <body>
@@ -43,38 +44,36 @@
         <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
         <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
       </svg>
-
     </div>
-
   </header>
   
-<!-- partial:index.partial.html -->
-<div class="page-wrapper chiller-theme"> <a id="show-sidebar" class="btn" href="#"> <i class="fas fa-bars"></i> </a>
-  <nav id="sidebar" class="sidebar-wrapper">
-    <div class="sidebar-content">
-      <div class="sidebar-brand"> <a href="#">ascvn.com.vn</a>
-        <div id="close-sidebar"> <i class="fas fa-times"></i> </div>
-      </div>
-      <div class="sidebar-header">
-        <div class="user-pic"> <img class="img-responsive img-rounded" src="http://ascvn.com.vn/University/00_EPMT/images/logo/logo.png"
+  <!-- partial:index.partial.html -->
+  <div class="page-wrapper chiller-theme"> <a id="show-sidebar" class="btn" href="#"> <i class="fas fa-bars"></i> </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand"> <a href="#">ascvn.com.vn</a>
+          <div id="close-sidebar"> <i class="fas fa-times"></i> </div>
+        </div>
+        <div class="sidebar-header">
+          <div class="user-pic"> <img class="img-responsive img-rounded" src="http://ascvn.com.vn/University/00_EPMT/images/logo/logo.png"
             alt="User picture"> </div>
-        <div class="user-info"> <span class="user-name"><strong>KHO GIAO DIỆN</strong></span> <span class="user-role">Tài khoản khách</span> <span class="user-status"> <i class="fa fa-circle"></i> <span>Online</span> </span> </div>
-      </div>
-      <!-- sidebar-header  -->
-      <div class="sidebar-search">
-        <div>
-          <div class="input-group">
-            <input type="text" class="form-control search-menu" placeholder="Tìm kiếm ...">
-            <div class="input-group-append"> <span class="input-group-text"> <i class="fa fa-search" aria-hidden="true"></i> </span> </div>
+          <div class="user-info"> <span class="user-name"><strong>KHO GIAO DIỆN</strong></span> <span class="user-role">Tài khoản khách</span> <span class="user-status"> <i class="fa fa-circle"></i> <span>Online</span> </span> </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Tìm kiếm ...">
+              <div class="input-group-append"> <span class="input-group-text"> <i class="fa fa-search" aria-hidden="true"></i> </span> </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- sidebar-search  -->
-      <div class="sidebar-menu">
-        <ul>
-          <li class="header-menu"> <span>MẪU DEMO</span> </li>
-          <li class="sidebar-dropdown"> <a href="#"> <i class="fa fa-tachometer-alt"></i> <span>Tất cả mẫu</span> <span id="allview-b" class="badge badge-pill badge-success"></span> </a>
-<!--
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu"> <span>MẪU DEMO</span> </li>
+            <li class="sidebar-dropdown"> <a href="#"> <i class="fa fa-tachometer-alt"></i> <span>Tất cả mẫu</span> <span id="allview-b" class="badge badge-pill badge-success"></span> </a> 
+              <!--
             <div class="sidebar-submenu">
               <ul>
                 <li> <a href="#">Mẫu Tuyển sinh<span class="badge badge-pill badge-success">Pro</span> </a> </li>
@@ -82,36 +81,30 @@
                 <li> <a href="#">Mẫu Landing page<span class="badge badge-pill badge-success">Pro</span></a> </li>
               </ul>
             </div>
--->
-          </li>
-          <li class="sidebar-dropdown link1"> <a href="#tuyensinh"> <i class="fa fa-globe"></i> <span>Mẫu Tuyển sinh</span> <span id="tuyensinh-b" class="badge badge-pill badge-danger"></span> </a>
-            
-          </li>
-          <li class="sidebar-dropdown link2"> <a href="#truonghoc"> <i class="far fa-gem"></i> <span>Mẫu Trường học</span> <span id="school-b" class="badge badge-pill badge-danger"></span></a>
-            
-          </li>
-          <li class="sidebar-dropdown link3"> <a href="#"> <i class="fa fa-chart-line"></i> <span>Mẫu Landing page</span> </a>
-            
-          </li>
-          <li class="sidebar-dropdown link4"> <a href="#"> <i class="fa fa-shopping-cart"></i> <span>Các mẫu khác</span> </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li> <a href="#">Google maps</a> </li>
-                <li> <a href="#">Open street map</a> </li>
-              </ul>
-            </div>
-          </li>
-          <li class="header-menu"> <span>Hỗ trợ khách hàng</span> </li>
-          <li> <a href="#"> <i class="fa fa-book"></i> <span>Tài liệu hướng dẫn</span> <span class="badge badge-pill badge-primary">Beta</span> </a> </li>
-          <li> <a href="#"> <i class="fa fa-calendar"></i> <span>Câu hỏi thường gặp</span><span class="badge badge-pill badge-success">10</span> </a> </li>
-          <li class="link5"> <a href="#"> <i class="fa fa-folder"></i> <span>Địa chỉ liên hệ</span><span class="badge badge-pill badge-warning">Call</span> </a> </li>
-        </ul>
+--> 
+            </li>
+            <li class="sidebar-dropdown link1"> <a href="#tuyensinh"> <i class="fa fa-globe"></i> <span>Mẫu Tuyển sinh</span> <span id="tuyensinh-b" class="badge badge-pill badge-danger"></span> </a> </li>
+            <li class="sidebar-dropdown link2"> <a href="#truonghoc"> <i class="far fa-gem"></i> <span>Mẫu Trường học</span> <span id="school-b" class="badge badge-pill badge-danger"></span></a> </li>
+            <li class="sidebar-dropdown link3"> <a href="#"> <i class="fa fa-chart-line"></i> <span>Mẫu Landing page</span> </a> </li>
+            <li class="sidebar-dropdown link4"> <a href="#"> <i class="fa fa-shopping-cart"></i> <span>Các mẫu khác</span> </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li> <a href="#">Google maps</a> </li>
+                  <li> <a href="#">Open street map</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu"> <span>Hỗ trợ khách hàng</span> </li>
+            <li> <a href="#"> <i class="fa fa-book"></i> <span>Tài liệu hướng dẫn</span> <span class="badge badge-pill badge-primary">Beta</span> </a> </li>
+            <li> <a href="#"> <i class="fa fa-calendar"></i> <span>Câu hỏi thường gặp</span><span class="badge badge-pill badge-success">10</span> </a> </li>
+            <li class="link5"> <a href="#"> <i class="fa fa-folder"></i> <span>Địa chỉ liên hệ</span><span class="badge badge-pill badge-warning">Call</span> </a> </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  --> 
       </div>
-      <!-- sidebar-menu  --> 
-    </div>
-    <!-- sidebar-content  --> 
-    
-    <!--
+      <!-- sidebar-content  --> 
+      
+      <!--
     <div class="sidebar-footer"> 
     <a href="#"> <i class="fa fa-bell"></i> <span class="badge badge-pill badge-warning notification">3</span> </a> 
     <a href="#"> <i class="fa fa-envelope"></i> <span class="badge badge-pill badge-success notification">7</span> </a> 
@@ -119,29 +112,29 @@
     <a href="#"> <i class="fa fa-power-off"></i> </a> 
     </div>
 --> 
-    
-  </nav>
-  <!-- sidebar-wrapper  -->
-  <main class="page-content">
-    <div class="container-fluid">
-      <header>
-        <div class="header-banner">
-          <h1>Kho giao diện - ASC</h1>
-        </div>
-        <div class="clear"></div>
-        <nav id="site_head">
-          <div class="site-title">Kho giao diện - ASC</div>
-<!--
+      
+    </nav>
+    <!-- sidebar-wrapper  -->
+    <main class="page-content">
+      <div class="container-fluid">
+        <header>
+          <div class="header-banner">
+            <h1>Kho giao diện - ASC</h1>
+          </div>
+          <div class="clear"></div>
+          <nav id="site_head">
+            <div class="site-title">Kho giao diện - ASC</div>
+            <!--
           <ul>
             <li><a href="/archive">Archive</a></li>
             <li><a href="/events">Events</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
--->
-        </nav>
-      </header>
-      
-      <!--
+--> 
+          </nav>
+        </header>
+        
+        <!--
      <div class="header">
       <div class="logo"><img src="js/logo-asc.png" alt=""></div>
       <nav class="navi">
@@ -168,610 +161,598 @@
       </nav>
     </div>
 -->
-      <div class="tieude" id="truonghoc"> <span>Mẫu giao diện Trường học</span></div>
-	  
-      <div class="hienthi giaodiendaihoc">
-      
-       <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trangchu-toiec-v1.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trangchu-toiec-v1.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v4.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trang-yduoccantho_v4.jpg" target="_blank"> Xem MẪU</a> </h2>
+        <div class="tieude" id="truonghoc"> <span>Mẫu giao diện Trường học</span></div>
+        <div class="hienthi giaodiendaihoc">
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau-01-08-22/unigo-1.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau-01-08-22/unigo-1.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau-01-08-22/Trang chủ - DKS.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau-01-08-22/Trang chủ - DKS.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau-01-08-22/Web liên cấp Thành Đô (UNIGO)- Option 2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau-01-08-22/Web liên cấp Thành Đô (UNIGO)- Option 2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trangchu-toiec-v1.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trangchu-toiec-v1.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v4.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trang-yduoccantho_v4.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v1.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trang-yduoccantho_v1.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trang-yduoccantho_v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trangchu-iigvietnam-v2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trangchu-iigvietnam-v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v3.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau12-12/trang-yduoccantho_v3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/trangchu-UFBA-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/trangchu-UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/trangmau-daihocthaibinh-2-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/trangmau-daihocthaibinh-2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_5-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/home_daihoc_2020_5-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_4-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/home_daihoc_2020_4-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v1.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trang-yduoccantho_v1.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_1-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/home_daihoc_2020_1-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trang-yduoccantho_v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/truong-daihochungvuong.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/truong-daihochungvuong.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trangchu-iigvietnam-v2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trangchu-iigvietnam-v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/truong-daihocphanthiet.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/truong-daihocphanthiet.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau12-12/trang-yduoccantho_v3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau12-12/trang-yduoccantho_v3.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_2-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/home_daihoc_2020_2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/trangchu-UFBA-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/trangchu-UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/truong-kinhtelongan.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/truong-kinhtelongan.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      
-       <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/trangmau-daihocthaibinh-2-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/trangmau-daihocthaibinh-2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-       <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_5-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/home_daihoc_2020_5-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/truong-kinhtenghean.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/truong-kinhtenghean.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      
-      
-      
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_4-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/home_daihoc_2020_4-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-		
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_1-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/home_daihoc_2020_1-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/truong-daihoc-5-hongduc2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/truong-daihoc-5-hongduc2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-       
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/truong-daihochungvuong.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/truong-daihochungvuong.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/trangchu_HPU2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/trangchu_HPU2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/truong-daihocphanthiet.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/truong-daihocphanthiet.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/dh-hue-ttgiaoducquocte-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/dh-hue-ttgiaoducquocte-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau14-4/home_daihoc_2020_2-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/home_daihoc_2020_2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/truong-kinhtelongan.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/truong-kinhtelongan.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/hotec-demo2-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/hotec-demo2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/truong-kinhtenghean.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/truong-kinhtenghean.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-5.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-5.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/truong-daihoc-5-hongduc2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/truong-daihoc-5-hongduc2.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau10-10/cuusinhvien_UFBA-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/cuusinhvien_UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/trangchu_HPU2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/trangchu_HPU2.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-6.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-6.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/dh-hue-ttgiaoducquocte-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/dh-hue-ttgiaoducquocte-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-7.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-7.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/hotec-demo2-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/hotec-demo2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-8.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-8.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-5.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-5.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/tuyensinh-yds-2-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/tuyensinh-yds-2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau10-10/cuusinhvien_UFBA-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/cuusinhvien_UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/trangchu_NongLamBG-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/trangchu_NongLamBG-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-6.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-6.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/trangchu-DongDo-min.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/trangchu-DongDo-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-7.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-7.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/truong_daihoc_mahongduc -3-min.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/truong_daihoc_mahongduc -3-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-8.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-8.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau9-9/truong-daihoc-hufi-4-min.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/mau9-9/truong-daihoc-hufi-4-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/tuyensinh-yds-2-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/tuyensinh-yds-2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/27_dh-kientruc-UAH-v3.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/27_dh-kientruc-UAH-v3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/trangchu_NongLamBG-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/trangchu_NongLamBG-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/26_dh-kientruc-uah-v4.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/26_dh-kientruc-uah-v4.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/trangchu-DongDo-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/trangchu-DongDo-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/25_trangchu-dh1.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/25_trangchu-dh1.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/truong_daihoc_mahongduc -3-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/truong_daihoc_mahongduc -3-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/24_trangchu-dh2.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/24_trangchu-dh2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau9-9/truong-daihoc-hufi-4-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau9-9/truong-daihoc-hufi-4-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/23_trangchu_its.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/23_trangchu_its.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/27_dh-kientruc-UAH-v3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/27_dh-kientruc-UAH-v3.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/21_trangchu-dongan.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/21_trangchu-dongan.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/26_dh-kientruc-uah-v4.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/26_dh-kientruc-uah-v4.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/20_truong-lequydon.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/20_truong-lequydon.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/25_trangchu-dh1.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/25_trangchu-dh1.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/19_trangchu-iuh-3.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/19_trangchu-iuh-3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/24_trangchu-dh2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/24_trangchu-dh2.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/18_trangchu-uah-v1b.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/18_trangchu-uah-v1b.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/23_trangchu_its.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/23_trangchu_its.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/17_dh-pct.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/17_dh-pct.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/21_trangchu-dongan.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/21_trangchu-dongan.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/16_trangchu-iuh-4.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/16_trangchu-iuh-4.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/20_truong-lequydon.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/20_truong-lequydon.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/15_dh_dalat2.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/15_dh_dalat2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/19_trangchu-iuh-3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/19_trangchu-iuh-3.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/14_truonghoc_phuongnam.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/14_truonghoc_phuongnam.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/18_trangchu-uah-v1b.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/18_trangchu-uah-v1b.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/13_trangchu_daihocykhoa4.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/13_trangchu_daihocykhoa4.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/17_dh-pct.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/17_dh-pct.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/12_trangchu_pou.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/12_trangchu_pou.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/16_trangchu-iuh-4.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/16_trangchu-iuh-4.jpg" target="_blank"> Xem MẪU</a> </h2>
+            <h3></h3>
+          </div>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/11_trangchu_daihoctks_3.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/11_trangchu_daihoctks_3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/15_dh_dalat2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/15_dh_dalat2.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/10_trangchu_daihocykhoa3.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/10_trangchu_daihocykhoa3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/14_truonghoc_phuongnam.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/14_truonghoc_phuongnam.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/9_trangchu_hungvuong.jpg"  alt/>
+              <div class="caption">
+                <h2> <a href="img/9_trangchu_hungvuong.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/13_trangchu_daihocykhoa4.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/13_trangchu_daihocykhoa4.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/8_trangchu_daihoctks_2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/8_trangchu_daihoctks_2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/12_trangchu_pou.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/12_trangchu_pou.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/7_trangchu_daihocykhoa2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/7_trangchu_daihocykhoa2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/11_trangchu_daihoctks_3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/11_trangchu_daihoctks_3.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/6_truong_daihoc_hershel.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/6_truong_daihoc_hershel.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/10_trangchu_daihocykhoa3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/10_trangchu_daihocykhoa3.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/5_truong_daihoc_madison.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/5_truong_daihoc_madison.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/9_trangchu_hungvuong.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/9_trangchu_hungvuong.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/4_truong_daihoc_qt_toancau.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/4_truong_daihoc_qt_toancau.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/8_trangchu_daihoctks_2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/8_trangchu_daihoctks_2.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/3_trangchu-chienthang.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/3_trangchu-chienthang.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/7_trangchu_daihocykhoa2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/7_trangchu_daihocykhoa2.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/2_trangchu_hufi.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/2_trangchu_hufi.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/6_truong_daihoc_hershel.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/6_truong_daihoc_hershel.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/1_dh_nghethuat.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/1_dh_nghethuat.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/5_truong_daihoc_madison.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/5_truong_daihoc_madison.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-3.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/4_truong_daihoc_qt_toancau.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/4_truong_daihoc_qt_toancau.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child school">
+            <div class="img-child"> <img src="img/mau2-8/truong-daihoc-4.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau2-8/truong-daihoc-4.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
         </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/3_trangchu-chienthang.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/3_trangchu-chienthang.jpg" target="_blank"> Xem MẪU</a> </h2>
+        <div class="tieude tuyensinh" id="tuyensinh"> <span>Mẫu giao diện chuyên trang tuyển sinh</span></div>
+        <div class="hienthi giaodientuyensinh">
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau-01-08-22/Trang tuyển sinh v4 - CTUMP.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau-01-08-22/Trang tuyển sinh v4 - CTUMP.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/2_trangchu_hufi.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/2_trangchu_hufi.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau10-10/tuyensinh-hotec-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/tuyensinh-hotec-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/1_dh_nghethuat.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/1_dh_nghethuat.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau10-10/tuyensinh-UFBA-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/tuyensinh-UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-3.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau10-10/tuyensinhIETC-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau10-10/tuyensinhIETC-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child school">
-          <div class="img-child"> <img src="img/mau2-8/truong-daihoc-4.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau2-8/truong-daihoc-4.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau14-4/tuyensinh_daihoc_2020_2-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/tuyensinh_daihoc_2020_2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-      </div>
-	  
-	  
-      
-      <div class="tieude tuyensinh" id="tuyensinh"> <span>Mẫu giao diện chuyên trang tuyển sinh</span></div>
-      
-      <div class="hienthi giaodientuyensinh">
-	  <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/mau10-10/tuyensinh-hotec-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/tuyensinh-hotec-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-		<div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/mau10-10/tuyensinh-UFBA-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/tuyensinh-UFBA-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/1_tuyensinh-UAH.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/1_tuyensinh-UAH.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/mau10-10/tuyensinhIETC-min.png"/>
-            <div class="caption">
-              <h2> <a href="img/mau10-10/tuyensinhIETC-min.png" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau14-4/tuyensinh_daihoc_2020_3-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau14-4/tuyensinh_daihoc_2020_3-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        
-        
-        
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/mau14-4/tuyensinh_daihoc_2020_2-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/tuyensinh_daihoc_2020_2-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-      
-      
-      
-      
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/1_tuyensinh-UAH.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/1_tuyensinh-UAH.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-        
-        
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/mau14-4/tuyensinh_daihoc_2020_3-min.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/mau14-4/tuyensinh_daihoc_2020_3-min.jpg" target="_blank"> Xem MẪU</a> </h2>
-            </div>
-          </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/2_tuyensinh-hufi.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/2_tuyensinh-hufi.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/2_tuyensinh-hufi.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/2_tuyensinh-hufi.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/3_tuyensinh-UAH-v2.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/3_tuyensinh-UAH-v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/3_tuyensinh-UAH-v2.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/3_tuyensinh-UAH-v2.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
-        </div>
-        <div class="flex-child tuyensinh2">
-          <div class="img-child"> <img src="img/4_tuyensinh-hufi_3.jpg"/>
-            <div class="caption">
-              <h2> <a href="img/4_tuyensinh-hufi_3.jpg" target="_blank"> Xem MẪU</a> </h2>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/4_tuyensinh-hufi_3.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/4_tuyensinh-hufi_3.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
             </div>
+            <h3></h3>
           </div>
-          <h3></h3>
         </div>
-      </div>
-	  
-	  
-      <div class="company-info">
-        <div class="tieude" id="lienhe"> <span>Liên hệ</span> </div>
-        <img src="js/hotroascvn.jpg" width="100px"> 
-        <!--<div class="meta"> <span>Đội ngũ hỗ trợ của ASC luôn sẵn sàng hỗ trợ bạn.</span>
+        <div class="company-info">
+          <div class="tieude" id="lienhe"> <span>Liên hệ</span> </div>
+          <img src="js/hotroascvn.jpg" width="100px" alt/> 
+          <!--<div class="meta"> <span>Đội ngũ hỗ trợ của ASC luôn sẵn sàng hỗ trợ bạn.</span>
     <p><b>Trụ sở : </b> 21 Lê Trung Nghĩa, Phường 12, Quận Tân Bình, TPHCM</p>
     <p><b>Email : </b> <a href="mailto:thanhtrieu118@gmail.com">thanhtrieu118@gmail.com</a> &nbsp; - &nbsp;<a href="mailto:chuvanlam18@gmail.com">chuvanlam18@gmail.com</a></p>
     <p><b>Tổng đài hỗ trợ khách hàng </b>: 0985.115.461</p>
     <p><b>Tổng đài tư vấn dịch vụ </b>: 0988.550.665</p>
     <p>Từ 8h00 – 17h30 các ngày từ thứ 2 đến Thứ 7</p>
   </div> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141712184995!2d106.64798811523731!3d10.800456492305171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294831eee4b7%3A0x10c0ecd507356e41!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gVGnhur9uIELhu5kgU8OgaSBHw7JuIC0gQVNDVk4!5e0!3m2!1svi!2s!4v1657527710793!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141712184995!2d106.64798811523731!3d10.800456492305171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294831eee4b7%3A0x10c0ecd507356e41!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gVGnhur9uIELhu5kgU8OgaSBHw7JuIC0gQVNDVk4!5e0!3m2!1svi!2s!4v1657527710793!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
-    </div>
-  </main>
-  <!-- page-content" --> 
-  <a href="#" class="go-top">Lên đầu &#8593;</a> </div>
-  
+    </main>
+    <!-- page-content" --> 
+    <a href="#" class="go-top">Lên đầu &#8593;</a> </div>
 </div>
 <!-- end ip container --> 
-
 
 <script src="js/classie.js"></script> 
 <script src="js/pathLoader.js"></script> 
