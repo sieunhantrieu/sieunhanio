@@ -1,190 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web QR</title>
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-<style type="text/css">
-#canvas{
-    display:none;
-}
-#v{
-  width: 470px;
-  height: 352px;
-}
-@page :left {
-  margin-left: 3cm;
-}
-
-@page :right {
-  margin-left: 4cm;
-}
-  * {
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-  }
-  .page {
-      width: 15cm;
-      min-height: 10cm;
-      padding: 0cm;
-      margin: 1cm auto;
-      /*border: 1px #D3D3D3 solid;*/
-      /*border-radius: 5px;*/
-      background: white;
-      /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
-  }
-  .subpage {
-      padding: 1cm;
-      border: 5px red solid;
-      height: 256mm;
-      outline: 2cm #FFEAEA solid;
-  }
-  
-  @page {
-      size: A4;
-      margin: 0;
-  }
-  @media print {
-      .page {
-          margin: 0;
-          border: initial;
-          border-radius: initial;
-          width: initial;
-          min-height: initial;
-          box-shadow: initial;
-          background: initial;
-          page-break-after: always;
-      }
-  }
- 
-  @media print
-  {    
-      .no-print, .no-print *
-      {
-          display: none !important;
-      }
-  }
-  .qrcode{
-    position: relative;
-  }
-  .logo{
-    position:absolute;
-   left:45%;
-   top: 36%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <title>Tạo QR miễn phí - Siêu Nhân Triều</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 
 </head>
-
 <body>
-  <div class="row">
-      <a href="readqr.php" class="no-print" style="float: right;">Đọc mã QR</a> 
+<!-- partial:index.partial.html -->
+<!-- Tab Starts -->
+            <ul class="nav nav-tabs nav-justified" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active show" id="Url-tab" data-toggle="pill" href="#pills-Url" role="tab" aria-controls="pills-Url" aria-selected="false">Liên kết</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Email-tab" data-toggle="pill" href="#pills-Email" role="tab" aria-controls="pills-Email" aria-selected="false">Email</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="pill" href="#pills-Call" role="tab" aria-controls="pills-Call" aria-selected="true">Số điện thoại</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="ytb-tab" data-toggle="pill" href="#pills-Yutube" role="tab" aria-controls="pills-Yutube" aria-selected="true">Link Youtube</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sms-tab" data-toggle="pill" href="#pills-sms" role="tab" aria-controls="pills-sms" aria-selected="true">SMS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="text-tab" data-toggle="pill" href="#pills-text" role="tab" aria-controls="pills-text" aria-selected="true">Văn bản</a>
+                </li>
+            </ul>
+            <!-- Tab Ends -->
+            <hr>
+            <div class="tab-content" id="pills-tabContent">
+                <!-- URL - QR code generator starts -->
+                <div class="tab-pane fade active show" id="pills-Url" role="tabpanel" aria-labelledby="Url-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Liên kết URL</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Liên kết</span>
+                                                </div>
+                                                <input type="url" name="url" placeholder="https://sieunhan.one/" class="form-control" required="required">
+                                            </div>
 
-      <div id="test2" class="col s12">
-        <h4 style="color: blue; text-align: center;" class="no-print">TẠO MÃ QR CODE</h4>
-        <div class="container">
-          <div class="row">   
-            <div class="no-print">
-            <div class="col s6">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input  type="text" class="validate" id="mapo">
-                  <label for="password">Mã PO</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input  type="text" class="validate" id="mact">
-                  <label for="email">Mã chi tiết</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input type="number" class="validate" id="soluong">
-                  <label for="email">Số lượng</label>
-                </div>
-              </div>
-              <div class="row" style="text-align: right;">
-                <a class="waves-effect waves-light btn red" id="btntaoma"><i class="material-icons left">play_for_work</i>Tạo mã</a> 
-              </div>
-            </div>  
-            </div>  
-            <div class="col s6">
-              <div class="page" id="print">
-                <div class="row">
-                  <div class="col s12">
-                    <div style="border: 2px solid #000; border-radius: 5px; width: 245px;">
-                    <div id="qrcode" class="qrcode" style="margin-top: 10px; margin-left: 20px;">
-                      <img src="lib/logo.png" class="logo">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="size">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="url-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="url-qrcode"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                      <div style="margin-top: 10px; margin-left: 20px;">
-                        <p id="lblmapo">Mã PO: </p>
-                        <p id="lblmact">Mã chi tiết: </p>
-                        <p id="lblsoluong">Số lượng: </p>
-                      </div>
+                </div>
+
+                <!-- URL - QR code generator Ends -->
+
+                <!-- Email - QR code generator starts -->
+                <div class="tab-pane fade" id="pills-Email" role="tabpanel" aria-labelledby="Email-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Email</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                                                </div>
+                                                <input type="email" placeholder="sngdesigner@gmail.com" name="email" class="form-control" required="required">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="size1">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="email-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="email-qrcode"></div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="waves-effect waves-light btn green no-print" id="btnin" style="margin-top: 10px; margin-left: 75px;"><i class="material-icons left">print</i>In mã QR</button>
-                  </div>
-                  
-                </div>  
-              </div>              
+                </div>
+
+                <!-- Email - QR code generator Ends -->
+
+                <!-- Call - QR code generator starts -->
+                <div class="tab-pane fade" id="pills-Call" role="tabpanel" aria-labelledby="pills-Call-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Số điện thoại</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Số điện thoại</span>
+                                                </div>
+                                                <input type="tel" name="tel" placeholder="Nhập số điện thoại" class="form-control" required="required">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="sizetel">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="phone-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="phone-qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Call - QR code generator Ends -->
+
+                <!-- Youtube - QR code generator starts -->
+                <div class="tab-pane fade" id="pills-Yutube" role="tabpanel" aria-labelledby="ytb-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Youtube Link</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Liên kết Youtube</span>
+                                                </div>
+                                                <input type="url" name="yutube" placeholder="Nhập liên kết Youtube" class="form-control" required="required">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="size-ytb">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="ytb-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="ytb-qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youtube - QR code generator Ends -->
+
+                <!-- Sms - QR code generator starts -->
+                <div class="tab-pane fade" id="pills-sms" role="tabpanel" aria-labelledby="sms-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Sms</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Số điện thoại</span>
+                                                </div>
+                                                <input type="text" name="text" placeholder="Nhập số điện thoại" class="form-control" required="required">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-default">Tin nhắn SMS</span>
+                                                </div>
+                                                <input type="text" placeholder="Nhập nội dung văn bản" name="msg" class="form-control" required="required">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="size-sms">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="sms-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="sms-qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sms - QR code generator Ends -->
+
+                <!-- Text - QR code generator starts -->
+                <div class="tab-pane fade" id="pills-text" role="tabpanel" aria-labelledby="text-tab">
+                    <div class="row mx-2">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Tin nhắn SMS</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <div class="card p-4">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Nội dung</span>
+                                                </div>
+                                                <textarea placeholder="Nhập nội dung văn bản" class="form-control" name="desc" aria-label="With textarea" required="required"></textarea>
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">Kích thước ảnh</label>
+                                                </div>
+                                                <select class="custom-select" name="size-text">
+                                                    <option value="500x500" selected>500x500</option>
+                                                    <option value="300x300">300x300</option>
+                                                    <option value="200x200">200x200</option>
+                                                </select>
+                                            </div>
+                                            <input class="form-control" type="submit" value="Tạo mã QR" id="text-code-gen" readonly>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 card">
+                            <div class="text-center">
+                                <div class="p-4" id="text-qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text - QR code generator Ends -->
+                <div class="card m-2">
+                    <div class="card-body">
+                        <button type="submit" style="display: block;" class="btn  btn-outline-secondary btn-lg btn-block" id="downloadsvg" download="barcode.png">Tải QR Code về</button>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
-      </div>   
-     
+<!-- partial -->
+  <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<!--<script src="js/vendor-c199bfdc0c1f2b5160a1.chunk.js"></script>-->
+<script  src="js/script.js"></script>
 
 </body>
-  <script type="text/javascript" src="createQR/jquery.min.js"></script>
-  <script type="text/javascript" src="createQR/qrcode.js"></script>
-  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-  <!-- create qr code -->
-  <script type="text/javascript">
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-      width : 200,
-      height : 200
-    });
-
-    function makeCode () {    
-      var mapo = $("#mapo").val();      
-      var mact = $("#mact").val();      
-      var soluong = $("#soluong").val();      
-      var elText = mapo + '|' + mact + '|' + soluong;
-      qrcode.makeCode(elText);
-    }
-
-    makeCode();
-
-    $("#btntaoma").
-      on("click", function () {
-        makeCode();
-         //lấy thông tin
-        $("#lblmapo").empty();
-        $("#lblmact").empty();
-        $("#lblsoluong").empty();
-        var mapo = $("#mapo").val();
-        $("#lblmapo").text("Mã PO: " + mapo);
-        var mact = $("#mact").val();
-        $("#lblmact").text("Mã chi tiết: " + mact);
-        var soluong = $("#soluong").val();
-        $("#lblsoluong").text("Số lượng: " + soluong);
-      }).
-      on("keydown", function (e) {
-        if (e.keyCode == 13) {
-          makeCode();
-        }
-      });  
-   
-    $("#btnin").click(function(event) {
-      window.print();
-    });
-
-  </script>
 </html>
