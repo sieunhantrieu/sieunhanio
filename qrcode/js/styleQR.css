@@ -71,8 +71,8 @@ body {
     border-bottom: 4px solid #fff;
     border-color: transparent transparent #fff;
 }
-#url-qrcode canvas,#email-code-gen canvas,#phone-code-gen canvas,#ytb-code-gen canvas,#text-code-gen canvas,
-#sms-code-gen canvas
+#url-qrcode canvas,#email-qrcode canvas,#phone-qrcode canvas,#ytb-qrcode canvas,#text-qrcode canvas,
+#sms-qrcode canvas
 {
 	max-width: 100%!important;
 }
