@@ -76,3 +76,22 @@ body {
 {
 	max-width: 100%!important;
 }
+
+.tab-pane .col-md-4.card .text-center
+{
+	height: 100%;
+	display: block;
+}
+#url-qrcode,#email-qrcode ,#phone-qrcode ,#ytb-qrcode,#text-qrcode,
+#sms-qrcode
+{	
+	height: 100%;
+	display: block;
+/*
+	background-image: url("../img/myqrcode.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 0.3;
+*/
+}
