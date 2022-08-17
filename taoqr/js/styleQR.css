@@ -1,0 +1,53 @@
+body {
+	 background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+	background-size: 400% 400%;
+	
+	height: 100vh;
+	animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1400px;
+}
+}
+.logo-superQRcode{
+	padding: 20px;
+	text-align: center;
+	display: block;
+}
+#downloadsvg{display: none;}
+.tab-content{
+	background: #e8eef2;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 20px rgb(0 0 0 / 25%);
+}
+.tab-pane .col-md-8 .card .card{margin-left: 0;}
+.tab-pane .col-md-8 .card{
+	margin-left: -15px;
+	padding-bottom: 15px;
+	height: 100%}
+.nav-tabs.lienkettab{border-bottom: 0;}
+.nav-tabs.lienkettab .nav-link{
+	font-size: 1.2em;font-weight: 700;
+	color: #ffffff;
+}
+.nav-tabs.lienkettab .nav-link:hover{
+	background-color: rgba(255,255,255,0.1);
+	border-color: transparent;
+}
+.nav-tabs.lienkettab .nav-link.active {
+    color: #ffffff;
+    background-color: transparent;
+    border-bottom: 4px solid #fff;
+    border-color: transparent transparent #fff;
+}
+#url-qrcode canvas{
+	max-width: 100%!important;
+}
