@@ -16,6 +16,11 @@ body {
     max-width: 1400px;
 }
 }
+@media (min-width: 767px){
+.container {
+    max-width: 100%;
+}
+}
 .logo-superQRcode{
 	padding: 20px;
 	text-align: center;
@@ -66,6 +71,8 @@ body {
     border-bottom: 4px solid #fff;
     border-color: transparent transparent #fff;
 }
-#url-qrcode canvas{
+#url-qrcode canvas,#email-code-gen canvas,#phone-code-gen canvas,#ytb-code-gen canvas,#text-code-gen canvas,
+#sms-code-gen canvas
+{
 	max-width: 100%!important;
 }
