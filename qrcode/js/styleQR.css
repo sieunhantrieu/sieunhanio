@@ -20,6 +20,15 @@ body {
 .container {
     max-width: 100%;
 }
+	.tab-pane .col-md-8 .card{
+		margin-right: -15px;
+	}
+	.tab-pane .col-md-8 .card .card{
+		margin-left: inherit!important;
+	}
+	.nav-justified .nav-item {
+		flex-basis: auto!important;
+	}
 }
 .logo-superQRcode{
 	padding: 20px;
