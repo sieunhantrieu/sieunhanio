@@ -87,7 +87,7 @@
 .ip-header .ip-loader svg path.ip-loader-circle {
 	-webkit-transition: stroke-dashoffset 0.2s;
 	transition: stroke-dashoffset 0.2s;
-	stroke:#20c997;
+	stroke:#ff006a; /*color circle*/
 }
 
 /* Content */
