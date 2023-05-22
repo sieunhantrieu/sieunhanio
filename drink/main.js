@@ -121,8 +121,8 @@ $('#add').on('click', function () {
     icon = 'hairy';
   }
 
-  var $info = $('<div class="post"><img src="http://www.sarabianchi.it/code-images/monsters/' + icon +
-    '-monster.svg"><p>Đã nốc vào: <strong>' + outputIngestedMl +
+  var $info = $('<div class="post"><img src="https://sieunhan.one/drink/icons/' + icon +
+    'monster.svg"><p>Đã nốc vào: <strong>' + outputIngestedMl +
     ' ml</strong><br>Còn lại trong cơ thể: <strong>' + outputRemainingMl +
     ' ml</strong><br>Nồng độ cồn trong máu: <strong>' + outputBAC +
     ' %</strong><br>Thời gian vận công để hết men: <strong>' + minutesToOhFive +
