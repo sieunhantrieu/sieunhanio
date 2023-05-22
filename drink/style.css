@@ -121,7 +121,7 @@ body .container .post label {
   font-size: 18px;
   color: #111111;
   margin: 20px 30px 0px 0px;
-  display: inline-block;
+  display: flex;
   width: 16%;
 }
 body .container .card input,
@@ -173,7 +173,8 @@ body .container .post select option {
 body .container .card input,
 body .container .post input {
   /* margin-left: 18px; */
-  width: 100%;
+  /* width: 74%; */
+  flex: 1;
 }
 body .container .card textarea,
 body .container .post textarea {
@@ -184,8 +185,9 @@ body .container .post textarea {
 }
 body .container .card select,
 body .container .post select {
-  width: 100%;
+  /* width: 100%; */
   color: #fff;
+  flex: 1;
   /* padding-right: 11%!important; */
 }
 body .container .card a {
