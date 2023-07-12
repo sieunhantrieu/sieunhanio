@@ -121,7 +121,7 @@ $('#add').on('click', function () {
     icon = 'hairy';
   }
 
-  var $info = $('<div class="post"><img src="https://sieunhan.one/drink/icons/' + icon +
+  var $info = $('<div class="post"><img src="https://sieunhan.io.vn/drink/icons/' + icon +
     'monster.svg"><p>Đã nốc vào: <strong>' + outputIngestedMl +
     ' ml</strong><br>Còn lại trong cơ thể: <strong>' + outputRemainingMl +
     ' ml</strong><br>Nồng độ cồn trong máu: <strong>' + outputBAC +
