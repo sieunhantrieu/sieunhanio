@@ -12,6 +12,8 @@
 <link rel="stylesheet" type="text/css" href="css/stylemenu.css">
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/effect2.css" />
+<link rel="stylesheet" type="text/css" href="css/effectcursor.css" />
+
 <script src="js/modernizr.custom.js"></script>
 </head>
 
@@ -35,6 +37,7 @@
 }
 </style>
 <body>
+<div class="cursor"></div>
 <div id="ip-container" class="ip-container"> 
   <!-- initial header -->
   <header class="ip-header">
@@ -120,6 +123,7 @@
         <header>
           <div class="header-banner">
             <h1>Kho giao diện - ASC</h1>
+            <div id="particles-js"></div>
           </div>
           <div class="clear"></div>
           <nav id="site_head">
@@ -163,8 +167,7 @@
 -->
         <div class="tieude" id="truonghoc"> <span>Mẫu giao diện Trường học</span></div>
         <div class="hienthi giaodiendaihoc">
-			
-			 <div class="flex-child school">
+          <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-11-2022/home-tvc.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-11-2022/home-tvc.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -172,8 +175,7 @@
             </div>
             <h3></h3>
           </div>
-			
-			 <div class="flex-child school">
+          <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-11-2022/home-NDUN.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-11-2022/home-NDUN.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -181,8 +183,7 @@
             </div>
             <h3></h3>
           </div>
-			
-			 <div class="flex-child school">
+          <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-11-2022/home-SaigonTourist.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-11-2022/home-SaigonTourist.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -190,8 +191,6 @@
             </div>
             <h3></h3>
           </div>
-			
-			
           <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-12-9-22/NDUN - Demo trang chủ 4.jpg" alt/>
               <div class="caption">
@@ -200,8 +199,7 @@
             </div>
             <h3></h3>
           </div>
-			
-			<div class="flex-child school">
+          <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-12-9-22/NDUN - Demo trang chủ 1.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-12-9-22/NDUN - Demo trang chủ 1.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -209,8 +207,7 @@
             </div>
             <h3></h3>
           </div>
-			
-			<div class="flex-child school">
+          <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-01-08-22/unigo-1.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-01-08-22/unigo-1.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -522,6 +519,7 @@
             </div>
             <h3></h3>
           </div>
+<!--
           <div class="flex-child school">
             <div class="img-child"> <img src="img/20_truong-lequydon.jpg"  alt/>
               <div class="caption">
@@ -530,6 +528,7 @@
             </div>
             <h3></h3>
           </div>
+-->
           <div class="flex-child school">
             <div class="img-child"> <img src="img/19_trangchu-iuh-3.jpg"  alt/>
               <div class="caption">
@@ -618,6 +617,7 @@
             </div>
             <h3></h3>
           </div>
+<!--
           <div class="flex-child school">
             <div class="img-child"> <img src="img/8_trangchu_daihoctks_2.jpg" alt/>
               <div class="caption">
@@ -626,6 +626,7 @@
             </div>
             <h3></h3>
           </div>
+-->
           <div class="flex-child school">
             <div class="img-child"> <img src="img/mau-12-9-22/NDUN - Demo trang chủ 3.jpg" alt/>
               <div class="caption">
@@ -658,7 +659,7 @@
             </div>
             <h3></h3>
           </div>
-          <div class="flex-child school">
+ <!--         <div class="flex-child school">
             <div class="img-child"> <img src="img/3_trangchu-chienthang.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/3_trangchu-chienthang.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -666,6 +667,7 @@
             </div>
             <h3></h3>
           </div>
+
           <div class="flex-child school">
             <div class="img-child"> <img src="img/2_trangchu_hufi.jpg" alt/>
               <div class="caption">
@@ -674,6 +676,7 @@
             </div>
             <h3></h3>
           </div>
+-->
           <div class="flex-child school">
             <div class="img-child"> <img src="img/1_dh_nghethuat.jpg" alt/>
               <div class="caption">
@@ -700,9 +703,35 @@
           </div>
         </div>
         <div class="tieude tuyensinh" id="tuyensinh"> <span>Mẫu giao diện chuyên trang tuyển sinh</span></div>
-        <div class="hienthi giaodientuyensinh">
-			
-			<div class="flex-child tuyensinh2">
+        <div class="hienthi giaodientuyensinh"> 
+          
+          <!--	-->
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau29-1/Trang tuyển sinh HITU-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau29-1/Trang tuyển sinh HITU-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau29-1/Trang tuyển sinh Cao đẳng Trà Vinh - CDNTV-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau29-1/Trang tuyển sinh Cao đẳng Trà Vinh - CDNTV-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="flex-child tuyensinh2">
+            <div class="img-child"> <img src="img/mau29-1/Trang tuyển sinh Đại học Đồng Tháp - DTHU-min.jpg" alt/>
+              <div class="caption">
+                <h2> <a href="img/mau29-1/Trang tuyển sinh Đại học Đồng Tháp - DTHU-min.jpg" target="_blank"> Xem MẪU</a> </h2>
+              </div>
+            </div>
+            <h3></h3>
+          </div>
+          <!--	-->
+          <div class="flex-child tuyensinh2">
             <div class="img-child"> <img src="img/mau-11-2022/tuyensinh- PVMTC.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-11-2022/tuyensinh- PVMTC.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -710,8 +739,7 @@
             </div>
             <h3></h3>
           </div>
-			
-			<div class="flex-child tuyensinh2">
+          <div class="flex-child tuyensinh2">
             <div class="img-child"> <img src="img/mau-11-2022/tuyensinh-Saigontourist.jpg" alt/>
               <div class="caption">
                 <h2> <a href="img/mau-11-2022/tuyensinh-Saigontourist.jpg" target="_blank"> Xem MẪU</a> </h2>
@@ -719,7 +747,6 @@
             </div>
             <h3></h3>
           </div>
-			
           <div class="flex-child tuyensinh2">
             <div class="img-child"> <img src="img/mau-01-08-22/Trang tuyển sinh v4 - CTUMP.jpg" alt/>
               <div class="caption">
@@ -728,8 +755,6 @@
             </div>
             <h3></h3>
           </div>
-			
-			
           <div class="flex-child tuyensinh2">
             <div class="img-child"> <img src="img/mau10-10/tuyensinh-hotec-min.jpg" alt/>
               <div class="caption">
@@ -805,7 +830,7 @@
         </div>
         <div class="company-info">
           <div class="tieude" id="lienhe"> <span>Liên hệ</span> </div>
-          <img src="js/hotroascvn.jpg" width="100px" alt/> 
+          <img src="js/hotroascvn.png" width="100px" alt/> 
           <!--<div class="meta"> <span>Đội ngũ hỗ trợ của ASC luôn sẵn sàng hỗ trợ bạn.</span>
     <p><b>Trụ sở : </b> 21 Lê Trung Nghĩa, Phường 12, Quận Tân Bình, TPHCM</p>
     <p><b>Email : </b> <a href="mailto:thanhtrieu118@gmail.com">thanhtrieu118@gmail.com</a> &nbsp; - &nbsp;<a href="mailto:chuvanlam18@gmail.com">chuvanlam18@gmail.com</a></p>
@@ -813,7 +838,9 @@
     <p><b>Tổng đài tư vấn dịch vụ </b>: 0988.550.665</p>
     <p>Từ 8h00 – 17h30 các ngày từ thứ 2 đến Thứ 7</p>
   </div> -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141712184995!2d106.64798811523731!3d10.800456492305171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294831eee4b7%3A0x10c0ecd507356e41!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gVGnhur9uIELhu5kgU8OgaSBHw7JuIC0gQVNDVk4!5e0!3m2!1svi!2s!4v1657527710793!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141712184995!2d106.64798811523731!3d10.800456492305171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294831eee4b7%3A0x10c0ecd507356e41!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gVGnhur9uIELhu5kgU8OgaSBHw7JuIC0gQVNDVk4!5e0!3m2!1svi!2s!4v1657527710793!5m2!1svi!2s" width="100%" height="300" style="filter: invert(90%);border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			
+        
         </div>
       </div>
     </main>
@@ -821,12 +848,15 @@
     <a href="#" class="go-top">Lên đầu &#8593;</a> </div>
 </div>
 <!-- end ip container --> 
-
+<script  src="js/effectcursor.js"></script>
 <script src="js/classie.js"></script> 
 <script src="js/pathLoader.js"></script> 
-<script src="js/main.js"></script> 
+<script src="js/particle.js"></script> <script src="js/main.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js"></script> 
 <script  src="js/script.js"></script>
+
+	
+
 </body>
 </html>
