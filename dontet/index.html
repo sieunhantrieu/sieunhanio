@@ -126,8 +126,8 @@ function onYouTubeIframeAPIReady() {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;"><strong>Cùng <a href="http://sieunhan.io.vn">Siêu Nhân Triều </a></strong></span></h1>
-              <p>Tết Đinh Mùi 2027 nhằm vào ngày 05 tháng 02, 2027 Dương lịch</p>
-              <div class="ux-timer light" data-countdown="2027/2/05 00:00" data-text-day="ngày" data-text-day-p="Ngày" data-text-hour="giờ" data-text-hour-p="Giờ" data-text-min="min" data-text-min-p="Phút" data-text-plural="s" data-text-sec="sec" data-text-sec-p="Giây" data-text-week="Tuần" data-text-week-p="Tuần" id="timer-3053929"><span>8<strong>Tuần</strong></span><span>1<strong>ngày</strong></span><span>12<strong>Giờ</strong></span><span>9<strong>Phút</strong></span><span>38<strong>Giây</strong></span></div>
+              <p>Tết Đinh Mùi 2027 nhằm vào ngày 06 tháng 02, 2027 Dương lịch</p>
+              <div class="ux-timer light" data-countdown="2027/2/06 00:00" data-text-day="ngày" data-text-day-p="Ngày" data-text-hour="giờ" data-text-hour-p="Giờ" data-text-min="min" data-text-min-p="Phút" data-text-plural="s" data-text-sec="sec" data-text-sec-p="Giây" data-text-week="Tuần" data-text-week-p="Tuần" id="timer-3053929"><span>8<strong>Tuần</strong></span><span>1<strong>ngày</strong></span><span>12<strong>Giờ</strong></span><span>9<strong>Phút</strong></span><span>38<strong>Giây</strong></span></div>
               <style scope="scope">
 #timer-3053929{font-size:400%}
 #timer-3053929 span{background-color:rgba(255,255,255,0.86)}
@@ -226,7 +226,7 @@ Flatsome.behavior('ux-countdown', {
 <script type="text/javascript">
 //<![CDATA[
 // Countdown tet
-let timeout=null;function makeTimer(){let endTime=new Date("'02/05/2027 00:00:00 GMT+0700 (SE Asia Standard Time)");endTime=(Date.parse(endTime)/1000);let now=new Date();now=(Date.parse(now)/1000);let timeLeft=endTime-now,days=Math.floor(timeLeft/86400),hours=Math.floor((timeLeft-(days*86400))/3600),minutes=Math.floor((timeLeft-(days*86400)-(hours*3600))/60),seconds=Math.floor((timeLeft-(days*86400)-(hours*3600)-(minutes*60)));if(hours===0&&minutes===0&&seconds===0){clearTimeout(timeout)}else{if(hours<"10"){hours="0"+hours}if(minutes<"10"){minutes="0"+minutes}if(seconds<"10"){seconds="0"+seconds}
+let timeout=null;function makeTimer(){let endTime=new Date("'02/06/2027 00:00:00 GMT+0700 (SE Asia Standard Time)");endTime=(Date.parse(endTime)/1000);let now=new Date();now=(Date.parse(now)/1000);let timeLeft=endTime-now,days=Math.floor(timeLeft/86400),hours=Math.floor((timeLeft-(days*86400))/3600),minutes=Math.floor((timeLeft-(days*86400)-(hours*3600))/60),seconds=Math.floor((timeLeft-(days*86400)-(hours*3600)-(minutes*60)));if(hours===0&&minutes===0&&seconds===0){clearTimeout(timeout)}else{if(hours<"10"){hours="0"+hours}if(minutes<"10"){minutes="0"+minutes}if(seconds<"10"){seconds="0"+seconds}
 $("#daysthuhai").html(days-5+"");
 $("#days").html(days+"");
 $("#hours").html(hours+"");$("#minutes").html(minutes+"");$("#seconds").html(seconds+"");timeout=setTimeout(makeTimer,1000)}}makeTimer();
